@@ -62,17 +62,18 @@ st.markdown("""
     this means that they had similar poll behavior. It is important to note that I **did not include their parties** in the 
     algorithm, but really only **how the politicians voted** in votes taken from [here](https://www.abgeordnetenwatch.de/bundestag/abstimmungen). 
     
-    I only added the colors afterwards. Hence, it is interesting to see that there are still four clear clusters that correspond to the parties:
+    I only added the colors afterward. Hence, it is interesting to see that there are still four clear clusters that correspond to the parties:
 
-    1. the government cluster, consisting of the SPD, BÜNDNIS 90/DIE GRÜNEN and the FDP
+    1. the government cluster, consisting of the SPD, BÜNDNIS 90/DIE GRÜNEN, and the FDP
     2. the CDU cluster
     3. the AfD cluster
     4. the Linke/BSW cluster
 
     This means that usually, parties vote as one, apart from the small remainder cluster, and also some single politicians
-    being in clusters of other parties but their own. Also note how the governing parties form a single cluster.
+    being in clusters of other parties but their own. Also, note how the governing parties form a single cluster.
     Within this cluster, SPD and BÜNDNIS 90/DIE GRÜNEN overlap a lot according to the polling behavior of their members,
-    while the FDP stands out a little. Still, all in all, the governing parties also mainly act as one when voting.
+    while the FDP stands out a little. Still, all in all, the governing parties also mainly act as one when voting. Additionally,
+    although Linke and BSW form a cluster, the parties are separated within this cluster. Just zoom in!
 """)
 st.markdown("""
     ## Methodology
@@ -88,11 +89,11 @@ st.markdown("""
     ### Model
     Then, I trained a simple matrix factorization algorithm to train a model that tries to predict whether a politician
     would vote yes or no. To be more precise, I 
-    1. embedded each politician and each poll into a 8-dimensional vector
+    1. embedded each politician and each poll into an 8-dimensional vector
     2. took the dot product between these vectors
     3. output "yes" if the dot product is larger than 0, otherwise "no".
 """)
-with st.expander("See code"):
+with st.expander("See the code"):
     st.code("""
         [...]
         data = pl.read_parquet("data.parquet").sample(fraction=1.0, shuffle=True)
