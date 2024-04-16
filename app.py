@@ -50,7 +50,7 @@ chart = (
 )
 
 
-
+st.set_page_config(page_title="Politician Embeddings")
 st.title("German Politician Mandates Embeddings")
 st.markdown("I created embeddings of German politicians from the current legislative period of the Bundestag (2021 - 2025) based on their behavior in polls. I collected the poll data via the [API of abgeordnetenwatch.de](https://www.abgeordnetenwatch.de/api). It's just a fun project, so don't take it too seriously 😉.")
 st.markdown("**Last update: 15.04.2024. Later polls are not included.**")
