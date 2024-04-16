@@ -128,5 +128,6 @@ st.markdown("""
 """)
 st.markdown("""
     Created by Robert Kübler
+    
     [LinkedIn](https://www.linkedin.com/in/robert-kuebler/)
 """)
