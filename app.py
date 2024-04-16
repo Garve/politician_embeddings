@@ -126,8 +126,4 @@ st.markdown("""
     After the training, I could represent each politician and poll as a vector consisting of 8 numbers.
     Since this is hard to visualize, I reduced the dimension to 2 using [UMAP](https://umap-learn.readthedocs.io/en/latest/) (Uniform Manifold Approximation and Projection for Dimension Reduction). The result was what you can see in the chart now.
 """)
-st.markdown("""
-    Created by Robert Kübler
-    
-    [LinkedIn](https://www.linkedin.com/in/robert-kuebler/)
-""")
+st.markdown("""**Created by [Robert Kübler](https://www.linkedin.com/in/robert-kuebler/)**""")
